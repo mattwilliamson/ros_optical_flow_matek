@@ -6,7 +6,7 @@
 
 This is a WIP fork. It uses UART instead of SPI.
 
-### Build
+## Build
 
 ```sh
 pip install pyserial
@@ -21,6 +21,11 @@ colcon build --symlink-install --packages-select=ros_optical_flow_matek
 ```sh
 source install/setup.sh
 ros2 launch ros_optical_flow_matek optical_flow_launch.py
+```
+
+## Watch odometry
+```sh
+ros2 topic echo /flow_odom --flow-style
 ```
 
 
